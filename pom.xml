@@ -19,7 +19,7 @@
 
     <properties>
         <java.version>17</java.version>
-        <jjwt.version>0.11.5</jjwt.version> 
+        <jjwt.version>0.11.5</jjwt.version>
     </properties>
 
     <repositories>
@@ -93,6 +93,15 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.10.1</version> <!-- Cập nhật phiên bản hỗ trợ Java 17 -->
+                <configuration>
+                    <source>17</source>
+                    <target>17</target>
+                </configuration>
             </plugin>
         </plugins>
     </build>

@@ -1,8 +1,10 @@
-package main.java.com.hutieugo.repository;
+package com.hutieugo.backend.repository;
 
-import com.hutieugo.model.User;
+import com.hutieugo.backend.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface UserRepository extends JpaRepository<User, Long> {
     User findByEmail(String email);
 }

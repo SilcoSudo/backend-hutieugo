@@ -1,10 +1,11 @@
 package main.java.com.hutieugo.service;
 
-import com.hutieugo.model.User;
-import com.hutieugo.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+
+import com.hutieugo.backend.model.User;
+import com.hutieugo.backend.repository.UserRepository;
 
 @Service
 public class UserService {
@@ -16,7 +17,7 @@ public class UserService {
 
     public User registerUser(String name, String email, String password) {
         User user = new User();
-        user.setName(name);
+        user.setUsername(name);
         user.setEmail(email);
         user.setPassword(passwordEncoder.encode(password));
         return userRepository.save(user);

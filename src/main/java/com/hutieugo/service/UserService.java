@@ -1,4 +1,4 @@
-package main.java.com.hutieugo.service;
+package com.hutieugo.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;

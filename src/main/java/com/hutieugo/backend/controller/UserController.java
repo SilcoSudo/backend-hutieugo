@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/users")
-@CrossOrigin(origins = "http://localhost:3000") // Cho phép frontend kết nối
+@CrossOrigin(origins = "https://hutieugo.id.vn") // Cho phép frontend kết nối
 public class UserController {
 
     @Autowired

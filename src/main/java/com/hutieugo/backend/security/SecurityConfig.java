@@ -12,13 +12,13 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        http.csrf().disable() // Tắt CSRF cho API
-            .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/api/users/register", "/api/users/login").permitAll() // Cho phép truy cập các endpoint này mà không cần JWT
-                .anyRequest().authenticated() // Các endpoint khác yêu cầu JWT
-            )
-            .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)) // Không lưu trạng thái phiên
-            .addFilterBefore(jwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class); // Thêm filter để kiểm tra JWT
+        http.csrf(csrf -> csrf.disable()) // Tắt CSRF cho API
+                .authorizeHttpRequests(auth -> auth
+                                .requestMatchers("/api/users/register", "/api/users/login").permitAll() // Cho phép truy cập các endpoint này mà không cần JWT
+                                .anyRequest().authenticated() // Các endpoint khác yêu cầu JWT
+                )
+                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)) // Không lưu trạng thái phiên
+                .addFilterBefore(jwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class); // Thêm filter để kiểm tra JWT
 
         return http.build();
     }

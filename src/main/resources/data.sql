@@ -1,0 +1,1 @@
+INSERT INTO user (username, password, email) VALUES ('admin', '$2a$10$XURR5qZ.XyB7YpW7vG9nY.2qL8DDl7r4b0zECr9v5X.5kW6e.7k8i', 'admin@hutieugo.id.vn');

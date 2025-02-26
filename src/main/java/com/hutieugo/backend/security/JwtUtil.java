@@ -9,7 +9,7 @@ import java.util.Date;
 
 @Component
 public class JwtUtil {
-    private final String secret = "your-secret-key"; // Thay bằng secret key thực tế (nên đặt trong application.properties)
+    private final String secret = "your-secret-key"; // Thay bằng secret key thực tế
     private final long expiration = 86400000; // 24 hours in milliseconds
 
     public String generateToken(String username) {

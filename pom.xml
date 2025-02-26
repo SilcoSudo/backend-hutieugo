@@ -19,7 +19,7 @@
 
     <properties>
         <java.version>17</java.version>
-        <jjwt.version>0.12.3</jjwt.version> <!-- Nâng cấp lên phiên bản mới hơn của jjwt -->
+        <jjwt.version>0.12.3</jjwt.version> <!-- Nâng cấp lên phiên bản 0.12.3 -->
     </properties>
 
     <repositories>
@@ -71,14 +71,6 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!-- spring-security-crypto không cần thiết riêng biệt vì đã có trong spring-boot-starter-security -->
-        <!--
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-crypto</artifactId>
-        </dependency>
-        -->
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -103,7 +95,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.11.0</version> <!-- Cập nhật phiên bản mới hơn, hỗ trợ Java 17 -->
+                <version>3.11.0</version>
                 <configuration>
                     <source>17</source>
                     <target>17</target>

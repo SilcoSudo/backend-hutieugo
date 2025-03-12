@@ -9,7 +9,9 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins("https://hutieugo.id.vn")
-                .allowedMethods("GET", "POST", "PUT", "DELETE");
+                .allowedOrigins("http://localhost:3000", "https://hutieugo.id.vn") // Thay bằng domain front-end thực tế khi deploy
+                .allowedMethods("GET", "POST", "PUT", "DELETE")
+                .allowedHeaders("*")
+                .allowCredentials(true);
     }
 }

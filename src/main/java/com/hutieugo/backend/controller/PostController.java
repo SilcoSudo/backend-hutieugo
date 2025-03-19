@@ -1,6 +1,8 @@
+package com.hutieugo.backend.controller;
+import com.hutieugo.backend.model.Post;
+import com.hutieugo.backend.repository.PostRepository;
 import org.springframework.web.bind.annotation.*;
-import com.example.demo.model.Post;
-import com.example.demo.repository.PostRepository;
+
 import java.util.List;
 
 @RestController
